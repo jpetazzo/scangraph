@@ -86,7 +86,8 @@ function setupimage () {
     img.attr('src',imgname);
     $('#graphcontainer').children().remove();
     $('#graphcontainer').append(img);
-    setupcanvas();
+    // Delay canvas setup - if we do it too early, the image can end up borked
+    img.load(setupcanvas);
 }
 
 function setupmouse () {
