@@ -15,9 +15,11 @@ in Google Images).
 
 Follow those steps:
 
-#. Download scangraph files.
+#. `Download scangraph <https://github.com/jpetazzo/scangraph/zipball/master>`_
+   (you can of course get the code with ``git`` if you prefer that).
+#. Uncompress the archive in some directory on your system.
 #. Put the image file in the same directory.
-#. Load ``scangraph.html`` in your browser.
+#. Open ``scangraph.html`` (from your local directory) in your browser.
 #. Click on the "file" field, and select the image file.
    The image file should now appear in the scangraph page.
 #. Click on the lower left corner of the graph. This will be ``x0,y0``.
