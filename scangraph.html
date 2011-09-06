@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>ScanGraph</title>
+    <style>td { vertical-align: top; }</style>
+  </head>
+  <body>
+    <div id="coords">Loading JavaScript...</div>
+    <form>
+      Image (in current directory!)<input type="file" id="file">
+      <br>
+      x0:<input type="text" id="x0">
+      x1:<input type="text" id="x1">
+      Log?<input type="checkbox" id="xlog" value="log">
+      <br>
+      y0:<input type="text" id="y0">
+      y1:<input type="text" id="y1">
+      Log?<input type="checkbox" id="ylog" value="log">
+    </form>
+    <table>
+      <tr>
+	<td>
+	  <div id="graphcontainer">
+	    <!--<img id="graph" src="somegraph.png"></img>-->
+	  </div>
+	</td>
+	<td>
+	  <div id="output"></div>
+	</td>
+      </tr>
+    </table>
+    <script src="jquery-1.6.2.min.js"></script>
+    <script src="jcanvas.min.js"></script>
+    <script src="scangraph.js"></script>
+  </body>
+</html>
