@@ -65,13 +65,15 @@ function recompute() {
 }
 
 function setupcanvas () {
+    var zoom = 0.01*parseFloat($('#zoom').val());
     var imgw = $('#graph').width();
     var imgh = $('#graph').height();
     var imgsrc = $('#graph').attr('src');
     var canvas = $('<canvas>');
-    canvas.attr('width',imgw);
-    canvas.attr('height',imgh);
-    canvas.drawImage({source: imgsrc, fromCenter: false});
+    canvas.attr('width',imgw*zoom);
+    canvas.attr('height',imgh*zoom);
+    canvas.drawImage({ source: imgsrc, fromCenter: false, 
+		       width: imgw*zoom, height: imgh*zoom });
     var parent = $('#graph').parent();
     $('#graph').remove();
     parent.append(canvas);
