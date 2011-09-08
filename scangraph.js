@@ -1,5 +1,5 @@
 var log = Math.log
-var exp = Math.exp
+var pow = Math.pow
 
 function showcoords (e) {
     var pos = $('#graph').position();
@@ -51,12 +51,12 @@ function recompute() {
 	var x = points[i][0];
 	var y = points[i][1];
 	if (xlog) {
-	    var vx = vx0 * exp(log(x/x0)/log(x1/x0)*log(vx1/vx0));
+	    var vx = vx0 * pow(vx1/vx0,(x-x0)/(x1-x0));
 	} else {
 	    var vx = vx0 + (x-x0)/(x1-x0)*(vx1-vx0);
 	}
 	if (ylog) {
-	    var vy = vy0 * exp(log(y/y0)/log(y1/y0)*log(vy1/vy0));
+	    var vy = vy0 * pow(vy1/vy0,(y-y0)/(y1-y0));
 	} else {
 	    var vy = vy0 + (y-y0)/(y1-y0)*(vy1-vy0);
 	}
